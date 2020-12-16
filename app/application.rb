@@ -8,7 +8,6 @@ class Application
     if req.path.match(/items/)
       current_item_name = req.path[7..-1]
       puts current_item_name
-      puts Item.all
       current_item = Item.all.find{|item| item.name == current_item_name}
       puts current_item.name
       if(current_item != nil)
