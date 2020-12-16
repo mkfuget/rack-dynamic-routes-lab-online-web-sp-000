@@ -1,4 +1,4 @@
-require_relative
+require_relative './item'
 
 class Application
   def call(env)
