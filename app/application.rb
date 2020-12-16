@@ -7,10 +7,6 @@ class Application
 
     if req.path.match(/items/)
       current_item_name = req.path[7..-1]
-      puts current_item_name
-      Item.all.each do |x|
-        puts "-- #{x.name}"
-      end
       current_item = Item.all.find{|item| item.name == current_item_name}
       if(current_item != nil)
         return current_item.price
