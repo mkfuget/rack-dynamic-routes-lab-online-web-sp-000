@@ -14,7 +14,7 @@ class Application
       current_item = Item.all.find{|item| item.name == current_item_name}
       if(current_item != nil)
         puts "test"
-        return current_item.price
+        return current_item
       else 
         resp.write "Item not found"
         resp.status = 400
