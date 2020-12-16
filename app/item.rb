@@ -7,7 +7,7 @@ class Item
     @@items.push(self)
   end
   
-  def all 
+  def self.all 
     @@items 
   end
 end
