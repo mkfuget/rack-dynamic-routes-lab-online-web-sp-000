@@ -6,4 +6,8 @@ class Item
     @price = price
     @@items.push(self)
   end
+  
+  def all 
+    @@items 
+  end
 end
