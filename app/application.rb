@@ -6,7 +6,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      current_item_name = req.path.match(/items/)[0][6..-1]
+      current_item_name = req.path.match(/items*/)[0][6..-1]
       puts current_item_name
       current_item = Item.all.find{|item| item.name == current_item_name}
       if(current_item != nil)
