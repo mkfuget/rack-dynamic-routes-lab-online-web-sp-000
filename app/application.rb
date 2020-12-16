@@ -12,8 +12,8 @@ class Application
         puts "-- #{x.name}"
       end
       current_item = Item.all.find{|item| item.name == current_item_name}
-      puts current_item
       if(current_item != nil)
+        puts "test"
         return current_item.price
       else 
         resp.write "Item not found"
