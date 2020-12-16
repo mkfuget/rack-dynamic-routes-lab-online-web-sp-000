@@ -9,7 +9,9 @@ class Application
       current_item_name = req.path[7..-1]
       current_item = Item.all.find{|item| item.name == current_item_name}
       if(current_item != nil)
-        return current_item.price
+        resp.write current_item.price
+        resp.status = 200
+
       else 
         resp.write "Item not found"
         resp.status = 400
